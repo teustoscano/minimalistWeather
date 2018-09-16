@@ -25,9 +25,9 @@ export default class App extends React.Component {
     );
   }
 
-  fetchWeather(lat=25, lon=25){
+  fetchWeather(){
     fetch(
-      'http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${API_KEY}&units=metric'
+      'http://api.openweathermap.org/data/2.5/weather?q=Brasilia&APPID=d1aae89dfb2bf31d226c34c24a6974e1&units=metric'
     )
     .then(res => res.json())
     .then(json => {
@@ -41,15 +41,15 @@ export default class App extends React.Component {
   }
 
   render() {
-    const { isLoading } = this.state;
+    const { isLoading, weatherCondition, temperature } = this.state;
     return (
       <View style={styles.container}>
         {isLoading ? (
-          <Weather weather={'Haze'} temperature={22} />
-        ) : (
-          <View>
+          <View style={styles.loadingContainer}>
             <Text>Minimal Weather App</Text>
           </View>
+        ) : (
+          <Weather weather={weatherCondition} temperature={temperature} />
         )}
       </View>
     );
@@ -60,7 +60,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+  },
+  loadingContainer: {
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
+    backgroundColor: '#FFFDE4'
+  }
 });
