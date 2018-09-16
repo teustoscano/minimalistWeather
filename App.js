@@ -2,10 +2,21 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component {
+  state = {
+    isLoading: true
+  };
+
   render() {
+    const { isLoading } = this.state;
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+        {isLoading ? (
+          <Text>Fetching The Weather</Text>
+        ) : (
+          <View>
+            <Text>Minimal Weather App</Text>
+          </View>
+        )}
       </View>
     );
   }
