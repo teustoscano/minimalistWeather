@@ -45,7 +45,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         {isLoading ? (
-          <Weather weather={this.state.weatherCondition} temperature={this.state.temperature} />
+          <Weather weather={'Haze'} temperature={22} />
         ) : (
           <View>
             <Text>Minimal Weather App</Text>
