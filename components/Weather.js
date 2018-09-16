@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, Text, Stylesheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const Weather = () => {
 	return(
 		<View style={styles.weatherContainer}>
 			<View style={styles.headerContainer}>
-				<MaterialCommunityIcons size={48} name="weather-sunny" color{'#fff'} />
+				<MaterialCommunityIcons size={48} name="weather-sunny" color={'#fff'} />
 				<Text style={styles.tempText}>Temperatureº</Text>
 			</View>
 			<View style={styles.bodyContainer}>
@@ -17,7 +17,7 @@ const Weather = () => {
 	);
 };
 
-const styles = Stylesheet({
+const styles = StyleSheet.create({
 	weatherContainer: {
 		flex: 1,
 		backgroundColor: '#f7b733'
