@@ -32,6 +32,11 @@ export default class App extends React.Component {
     .then(res => res.json())
     .then(json => {
       console.log(json);
+      this.setState({
+        temperature: json.main.temp,
+        weatherCondition: json.weather[0].main,
+        isLoading: false
+      });
     });
   }
 
@@ -40,7 +45,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         {isLoading ? (
-          <Text>Fetching The Weather</Text>
+          <Weather weather={this.state.weatherCondition} temperature={this.state.temperature} />
         ) : (
           <View>
             <Text>Minimal Weather App</Text>
