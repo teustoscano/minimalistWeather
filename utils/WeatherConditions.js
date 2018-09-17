@@ -7,45 +7,45 @@ export const weatherConditions = {
   },
   Clear: {
     color: '#f7b733',
-    title: 'So Sunny',
-    subtitle: 'It is hurting my eyes',
+    title: 'Quentão',
+    subtitle: 'Ta calor pra carai',
     icon: 'weather-sunny'
   },
   Thunderstorm: {
     color: '#616161',
-    title: 'A Storm is coming',
-    subtitle: 'Because Gods are angry',
+    title: 'Ta caindo o mundo',
+    subtitle: 'Pode desmarcar o rolê',
     icon: 'weather-lightning'
   },
   Clouds: {
     color: '#1F1C2C',
-    title: 'Clouds',
-    subtitle: 'Everywhere',
+    title: 'Nublado',
+    subtitle: 'Acho melhor levar um guarda-chuva',
     icon: 'weather-cloudy'
   },
 
   Snow: {
     color: '#00d2ff',
-    title: 'Snow',
-    subtitle: 'Get out and build a snowman for me',
+    title: 'Neve',
+    subtitle: 'Mano aqui nem neva',
     icon: 'weather-snowy'
   },
   Drizzle: {
     color: '#076585',
-    title: 'Drizzle',
-    subtitle: 'Partially raining...',
+    title: 'Chuviscando',
+    subtitle: 'Só pra molhar mesmo',
     icon: 'weather-hail'
   },
   Haze: {
     color: '#66A6FF',
-    title: 'Haze',
-    subtitle: 'Another name for Partial Raining',
+    title: 'Neblina',
+    subtitle: 'Demônio do gás oculto...',
     icon: 'weather-hail'
   },
   Mist: {
     color: '#3CD3AD',
-    title: 'Mist',
-    subtitle: "Don't roam in forests!",
+    title: 'Névoa',
+    subtitle: "Dá pra ver nada",
     icon: 'weather-fog'
   }
 };
